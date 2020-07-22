@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <title>fwd</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+            integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    </head>
+    <body>
+<!-----------------------------------------mobile menu ------------------------------------------------------------------->
+
+
+<!--el icon eli 7anefta7 menha el menu-->
+<!-----------------------------------------end mobile menu ------------------------------------------------------------------->
+    <div id="navbarMobile" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" >&times;</a>
+        <!-- <a href="#about-us" class="menu-items overlay-content">about us</a>
+            <a href="#mission" class="menu-items overlay-content">mission</a>
+            <a href="#vision" class="menu-items overlay-content">vision</a> -->
+    
+    </div>
+    <span style="font-size:30px;cursor:pointer" class="open-mobileMenu openbtn" >&#9776; menu</span>
+
+<header>
+
+        
+    <div id="navbarHidden" style="height: 3em; padding-right: 5em;">
+        
+        </div>
+</header>
+
+    <button onclick="document.getElementById('login_div').style.display='block'" class="showLoginform">login</button>
+    <button class="showregisterform"
+        onclick="document.getElementById('register_div').style.display='block'">register</button>
+
+<!-- <a onclick="document.getElementById('login_div').style.display='block'" class="showLoginform">login</a>
+<a class="showregisterform" onclick="document.getElementById('register_div').style.display='block'">register</a>
+<a onclick="document.getElementById('contact_div').style.display='block'" class="showcontact_div">contact</a> -->
+    <div class="login_div" id="login_div">
+        <a class="fas fa-times" title="cancel login"
+            onclick="document.getElementById('login_div').style.display='none' "></a>
+        <img src="https://apetalds.sirv.com/Images/my%20images/img_avatar2.png" class="avatar" width="99" height="98"
+            alt="" />
+    
+    
+    
+        <form name="login" class="login_form" style="z-index: 10;">
+            <label>email</label><br><input type="text" id="login_email" name="email" placeholder="email">
+            <p></p>
+            <br>
+            <label>password</label><br><input type="password" name="password" placeholder="password">
+            <p></p>
+            <br>
+            <button type="submit" name="login">login</button>
+    
+        </form>
+    </div>
+    
+
+    <div class="register_div" id="register_div">
+        <a class="fas fa-times" title="cancel registration"
+            onclick="document.getElementById('register_div').style.display='none'"></a>
+    
+        <form name="register" class="register_form" id="register_form" >
+    
+            <h1>register</h1>
+            <h3>fill in this form to create an account</h3>
+            <label>fullname</label><br><input type="text" name="fullname" placeholder="full name">
+            <p></p>
+            <br>
+            <label>email</label><br><input type="text" name="registeremail" placeholder="email">
+            <p></p>
+            <br>
+            <label>password</label><br><input type="Password" name="registerPassword" placeholder=" password">
+            <p></p>
+            <br>
+            <label>confirm password</label><br><input type="Password" name="confirmPassword" placeholder="confirm password">
+            <p></p>
+            <br>
+    
+            <input type="radio" name="male"><label>male</label>
+            <input type="radio" name="female"><label>female</label>
+            <p id="error_msg_radio"></p>
+    
+            <br>
+            <h3>select your country</h3>
+            <select name="selection" value="vselection">
+                <option value="">country</option>
+                <option value="england">england</option>
+                <option value="egypt">egypt</option>
+                <option value="france">france</option>
+            </select>
+            <p></p>
+    
+            <br>
+            <h3>interests</h3>
+            <input type="checkbox" name="music" value="vmusic"><label>music</label>
+            <input type="checkbox" name="football" value="vfootball"><label>football</label>
+            <input type="checkbox" name="reading" value="vreading"><label>reading</label>
+            <br>
+            <p id="checkbox_errorMessage"></p>
+            <br>
+    
+            <button type="submit" name="registerbtn">register</button>
+        </form>
+    
+    
+    
+    
+    </div>
+    
+   
+    <div class="contact_div" id="contact_div">
+        <a class="fas fa-times" title="cancel contact-us"
+            onclick="document.getElementById('contact_div').style.display='none'"></a>
+        <h1>contact us</h1>
+        <form name="contact_us" class="contact_form">
+            <label>email</label><input type="text" name="contact_email" placeholder="contact email">
+            <p></p>
+            <br>
+            <label>contact name</label><input type="text" name="contact_name" placeholder="contact name">
+            <p></p>
+            <br>
+            <label>subject</label><textarea type="text" name="subject" placeholder="subject"></textarea>
+            <br>
+            <label>message</label><textarea name="message" placeholder="message" minlength="5" maxlength="10"></textarea>
+            <br>
+            <button type="submit" name="contactbtn" class="contact_btn">contact us</button>
+        </form>
+    </div>
+<!------------------------------------------ header and forms ended ----------------------------------------->
+    
+
+
+
+
+<!------------------------------------------ header and forms ended ----------------------------------------->
+        <button onclick="document.getElementById('contact_div').style.display='block'" class="showcontact_div">contact</button>
+<!------------------------------------------ start offers slider section ------------->
+
+<section id="specials" class="main-carousel section" style=" height: 12em; z-index:-1; margin-top:3em;  text-align: center; width: 100%; margin-bottom: 3em;" >
+    <div>
+        <h2 style="text-align: center; font-family: 'Anton', sans-serif; font-weight: bold;">nothing brings people together </h2>
+        <h2 style="text-align: center; font-family: 'Anton', sans-serif; font-weight: bold;">like good food</h2>
+        <div  style="display: flex;"">
+            <div class="carousel-cell">
+                <img src="https://i.ibb.co/KVNnPMz/shutterstock-423910912.jpg"
+                            alt="shutterstock-423910912" border="0">
+            </div>
+            <div class="carousel-cell">
+                <img src="https://i.ibb.co/82XC5RW/shutterstock-629070965.jpg"
+                        alt="shutterstock-629070965" border="0" />
+            </div>
+            <div class="carousel-cell">
+                <img src="https://i.ibb.co/QCSCwLk/shutterstock-1530435380.jpg"
+                        alt="shutterstock-1530435380" border="0">
+            </div>
+            <div class="carousel-cell">
+                <img src="https://i.ibb.co/cCzN277/shutterstock-767067433.jpg"
+                        alt="shutterstock-767067433" border="0">
+            </div>
+        </div>
+        <button class="specials-button">today's specials</button>
+    </div>
+</section>
+<!------------------------------------------ end offers slider section ------------->
+
+
+    <section id="about-us" class="about-us section" style="display: flex; margin-top: 7em ; ">
+        <div style="flex-basis: 50%; padding-left: 3em; align-self: center;">
+            <h1 style="display: none; ">about us</h1>
+            <p style="display: none; " class="vision-p">
+            Whether you're at a campsite or just don't want to make a mess, skillet desserts are an easy way to get a piping hot
+            dessert on your plate fast. These sweet, salty, and smooth recipes run the dessert gamut — there are fruity cobblers,
+            Reese's-inspired creations, chocolate bombs, and more.
+            </p>
+        </div>
+        <div style="flex-basis: 46%;">
+            <img src="https://i.ibb.co/KVNnPMz/shutterstock-423910912.jpg" alt="shutterstock-423910912" border="0">
+            <img style="width: 40%; " src="https://i.ibb.co/Ct987SB/restaurant.png" alt="restaurant" border="0">
+            
+        </div>
+    </section>
+    <section id="mission" class="about-us section" style="display: flex; padding-top: 4em;">
+        <div style="flex-basis: 40%; padding-left: 2em; align-self: center;  height: 19em; ">
+            <h1 style="display: none;">mission</h1>
+            <p style="display: none;" class="about-us-p">
+                Whether you're at a campsite or just don't want to make a mess, skillet desserts are an easy way to get a piping hot
+                dessert on your plate fast. These sweet, salty, and smooth recipes run the dessert gamut — there are fruity
+                cobblers,
+                Reese's-inspired creations, chocolate bombs, and more.
+            </p>
+        </div>
+            <div style="flex-basis: 30%;">
+            
+                 <img style="width:100%" src="https://i.ibb.co/rwG1m87/104580001-portrait-of-female-chef-with-wooden-spoon-isolated-on-white.jpg"
+                    alt="104580001-portrait-of-female-chef-with-wooden-spoon-isolated-on-white" border="0">
+            </div>
+            <div style="flex-basis: 50%;">
+                <img  src="https://i.ibb.co/p0tkkHh/39495f68050781-5b4f5c571f0ea.jpg"
+                        alt="39495f68050781-5b4f5c571f0ea" border="0">
+            </div>
+    </section>
+    <section id="vision" class="vision section" style="display: flex; ">
+        <div style="flex-basis: 50%; padding-left: 3em;  align-self: center;">
+             <h1 style="display: none;">vision</h1>
+             <p style="display: none;" class="mission-p" >
+                    Whether you're at a campsite or just don't want to make a mess, skillet desserts are an easy way to get a piping hot
+                    dessert on your plate fast. These sweet, salty, and smooth recipes run the dessert gamut — there are fruity
+                    cobblers,
+                    Reese's-inspired creations, chocolate bombs, and more.
+            </p>
+        </div>
+        <div style="flex-basis: 50%;">
+                <img src="https://i.ibb.co/QCSCwLk/shutterstock-1530435380.jpg" alt="shutterstock-1530435380" border="0">
+        </div>
+    </section>
+    
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity=""
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity=""></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+    </body>
+</html>
