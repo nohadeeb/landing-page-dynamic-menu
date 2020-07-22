@@ -222,9 +222,6 @@ function mouseOutImage() {
 }
 // validation forms ended
 
-//-------------------- carousel -----------------------------
-
-//-------------------- carousel -----------------------------
 
 //----------scroll to section---------------------------------
 // slide down the fixed menu --------
@@ -236,9 +233,9 @@ function scrollFunction() {
    else{
         document.getElementById("navbarHidden").style.top = "-55px";
     }
-}
+}//slide down fixed nav
 // end slide down the fixed menu --------
-// --------------mobile menu swicther--------------
+// --------------mobile menu swicther hide and show--------------
     document.querySelector('.openbtn').addEventListener('click', function openNav() {
         document.getElementById("navbarMobile").style.width = "100%";
     }
@@ -247,13 +244,11 @@ function scrollFunction() {
         document.getElementById("navbarMobile").style.width = "0%";
     }
     )
-function closeNav() {
-    document.getElementById("navbarMobile").style.width = "0%";
-}
+
 //------------- end mibile menu swutcher -----------------
 
-const t0=performance.now()
-let documentFragment = document.createDocumentFragment();
+const t0=performance.now()// test the function time
+let documentFragment = document.createDocumentFragment();// virtual object to store created elements
 let anchor;
 function createmenu() {
     let hiddennav = document.getElementById('navbarHidden');
@@ -271,8 +266,6 @@ function createmenu() {
         const li = document.createElement('li');//verify and create the li variable
         let anchor = document.createElement('a');
         let sectionsId=sectionsArray[i].getAttribute('id');// every time store the value of the section id
-        console.log(sectionsArray[i]);
-        console.log(sectionsId);
         // let linkContent = menulink[i].slice(1);
         li.appendChild(anchor);// evry time the loop excute it will create a li and append an anchor to it
         anchor.classList.add('menu-items');
@@ -296,14 +289,6 @@ function createmenu() {
       
 }
 
-    function removeActive() {
-        for (const menuitem of menuitemsArray) {
-            let hasActive = menuitem.classList.contains('active');
-            if (hasActive) {
-                menuitem.classList.remove('active');
-            }
-        }
-    } 
 createmenu();
 const t1 = performance.now();
 console.log('this code took ' + (t1 - t0 )  + 'melliseconds')
@@ -364,7 +349,7 @@ function scrollToId(){
                 });
             };
 
-            // how to call it (with a 1000ms timeout):
+            // how to call it (with a 3000ms timeout):
             $(window).scrollEnd(function () {
                 menuitem.classList.remove('active');// add class to menu item
                 document.getElementById(menuSectionI).classList.remove('actives');
@@ -375,7 +360,6 @@ function scrollToId(){
 }
     
 }
-
-    removeActive();     
+     
 });
 
