@@ -22,7 +22,6 @@ body{
     width: 20%;
     height: 2em;
     font-size: 1.5em;
-    position: relative;
 }
 .active{
 	border-bottom: 3px solid orange;
