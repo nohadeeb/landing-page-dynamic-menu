@@ -244,7 +244,7 @@ function scrollFunction() {
 //when the user click on the menu icon mobile give this navbar w width 100% as it's styled to width 0 by default 
 //and and the icon only shows on media query selected screens
     document.querySelector('.openbtn').addEventListener('click', function openNav() {
-        document.getElementById("navbarMobile").style.width = "100%";
+        document.getElementById("navbarMobile").style.width = "50%";
     }
 )
     //if the closebtn selected resize the navbarMobile to width 0 means hide it/ style with smooth transition on css file
