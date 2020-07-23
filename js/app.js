@@ -354,10 +354,10 @@ function scrollToId(){
             // Assign active class to nav links while scolling
             $('section').each(function (i) {//loop inside sections
                 if ($(this).position().top <= scrollDistance) {
+                    $('ul a.active').removeClass('active');//as i didn't append the mobile menu into a nav
+                    $('ul a').eq(i).addClass('active');//as i didn't append the mobile menu into a nav
                     $('nav a.active').removeClass('active');
                     $('nav a').eq(i).addClass('active');
-                    $('ul a.active').removeClass('active');
-                    $('ul a').eq(i).addClass('active');
                     $('section.actives').removeClass('actives');
                     $('section').eq(i).addClass('actives');
                 }
