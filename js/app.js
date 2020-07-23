@@ -356,6 +356,8 @@ function scrollToId(){
                 if ($(this).position().top <= scrollDistance) {
                     $('nav a.active').removeClass('active');
                     $('nav a').eq(i).addClass('active');
+                    $('ul a.active').removeClass('active');
+                    $('ul a').eq(i).addClass('active');
                     $('section.actives').removeClass('actives');
                     $('section').eq(i).addClass('actives');
                 }
