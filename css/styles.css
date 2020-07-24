@@ -469,7 +469,7 @@ input[type="text"]::before{
 @media(max-width:880px){
 	body{
 	
-width: 177%;
+width: 100%;
 }
 
 p,h1{
