@@ -326,7 +326,12 @@ function scrollToId(){
         active=true;
         let menuItemIdid = menuitem.getAttribute("href");// this will output the section id  #whateve
         const menuSectionI = menuItemIdid.slice(1);// i have to remove the # to be able to catch the section id on the next line
+
         document.getElementById(menuSectionI).scrollIntoView({ behavior: "smooth" });// scroll into required section id
+            if (active) {
+                menuitem.classList.add('active');// add class to menu item
+                document.getElementById(menuSectionI).classList.add('actives');
+            }//add class to section
         let hidden = document.getElementById(menuSectionI).firstElementChild.firstElementChild;
         hidden.style.display = "block"; 
         document.getElementById(menuSectionI).firstElementChild.firstElementChild.nextElementSibling.style.display = 'block'; 
@@ -350,7 +355,7 @@ function scrollToId(){
     })//end of event click
         // set active class according to section id and remove when the id changes
         $(window).scroll(function () {
-            let scrollDistance = $(window).scrollTop(); // distance between top and element
+            let scrollDistance = $(window).scrollTop() ; // distance between top and element
             // Assign active class to nav links while scolling
             $('section').each(function (i) {//loop inside sections
                 if ($(this).position().top <= scrollDistance) {
@@ -362,7 +367,9 @@ function scrollToId(){
                     $('section').eq(i).addClass('actives');
                 }
             });
+            
         }).scroll();
+
 
          
 }
